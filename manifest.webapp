@@ -1,6 +1,6 @@
 {
   "name": "demo-raytracing-shader",
-  "version": "0.0.341",
+  "version": "0.0.344",
   "description": "How to fly among hundreds of 3d spheres drawn on a 3D single face with shader.",
   "launch_path": "/index.html",
   "fullscreen": "false",
