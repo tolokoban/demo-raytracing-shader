@@ -12,7 +12,7 @@
       "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
     },
     "name": "demo-raytracing-shader",
-    "version": "0.0.340",
+    "version": "0.0.341",
     "author": "Tolokoban",
     "description": "How to fly among hundreds of 3d spheres drawn on a 3D single face with shader.",
     "license": "GPL",
