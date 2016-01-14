@@ -1,0 +1,8 @@
+<w:html app="main">
+  <!-- <script src="sylvester.js"></script> -->
+  <!-- <w:vertex-shader id="vertex-shader">vertex.c</w:vertex-shader> -->
+  <w:fragment-shader id="fragment-shader">fragment.c</w:fragment-shader>
+  <canvas id="glcanvas" width="640" height="480">
+    Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+  </canvas>
+</w:html>

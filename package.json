@@ -1,0 +1,23 @@
+{
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tolokoban/demo-raytracing-shader.git"
+    },
+    "homepage": "https://github.com/tolokoban/demo-raytracing-shader",
+    "bugs": {
+      "url": "https://github.com/tolokoban/demo-raytracing-shader/issues"
+    },
+    "scripts": {
+      "test": "jasmine",
+      "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
+    },
+    "name": "demo-raytracing-shader",
+    "version": "0.0.340",
+    "author": "Tolokoban",
+    "description": "How to fly among hundreds of 3d spheres drawn on a 3D single face with shader.",
+    "license": "GPL",
+    "tfw": {
+      "modules": [],
+      "compile": {"type": "firefoxos", "files": "\\.html$"}
+    }
+}
