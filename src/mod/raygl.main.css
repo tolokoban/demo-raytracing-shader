@@ -37,3 +37,12 @@ button {
 button[disabled] {
     background-color: #444;
 }
+
+
+#fps {
+    color: #eee;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2px;
+}

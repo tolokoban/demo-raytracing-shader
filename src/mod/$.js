@@ -2,11 +2,11 @@ exports.config={
     name:"demo-raytracing-shader",
     description:"How to fly among hundreds of 3d spheres drawn on a 3D single face with shader.",
     author:"Tolokoban",
-    version:"0.0.341",
+    version:"0.0.344",
     major:0,
     minor:0,
-    revision:341,
-    date:new Date(2016,0,14,15,42,44)
+    revision:344,
+    date:new Date(2016,0,14,16,28,23)
 };
 var currentLang = null;
 exports.lang = function(lang) {
