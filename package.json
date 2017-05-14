@@ -8,6 +8,7 @@
     "url": "https://github.com/tolokoban/demo-raytracing-shader/issues"
   },
   "scripts": {
+    "clean": "node node_modules/toloframework/bin/tfw.js clean",
     "watch": "node node_modules/toloframework/bin/tfw.js build debug watch",
     "test": "jasmine",
     "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"

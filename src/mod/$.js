@@ -1,17 +1,10 @@
-exports.config={
-    name:"demo-raytracing-shader",
-    description:"How to fly among hundreds of 3d spheres drawn on a 3D single face with shader.",
-    author:"Tolokoban",
-    version:"0.0.344",
-    major:0,
-    minor:0,
-    revision:344,
-    date:new Date(2016,0,14,16,28,23)
-};
+exports.config={"name":"\"demo-raytracing-shader\"","description":"\"How to fly among hundreds of 3d spheres drawn on a 3D single face with shader.\"","author":"\"Tolokoban\"","version":"\"0.0.344\"","major":"0","minor":"0","revision":"344","date":"2017-05-14T08:43:23.000Z","consts":{}};
 var currentLang = null;
 exports.lang = function(lang) {
     if (lang === undefined) {
-        lang = window.localStorage.getItem("Language");
+        if (window.localStorage) {
+            lang = window.localStorage.getItem("Language");
+        }
         if (!lang) {
             lang = window.navigator.language;
             if (!lang) {
@@ -24,24 +17,30 @@ exports.lang = function(lang) {
         lang = lang.substr(0, 2).toLowerCase();
     }
     currentLang = lang;
-    window.localStorage.setItem("Language", lang);
+    if (window.localStorage) {
+        window.localStorage.setItem("Language", lang);
+    }
     return lang;
 };
 exports.intl = function(words, params) {
     var dic = words[exports.lang()],
-    k = params[0],
-    txt, newTxt, i, c, lastIdx, pos;
+        k = params[0],
+        txt, newTxt, i, c, lastIdx, pos;
+    var defLang;
+    for( defLang in words ) break;
+    if( !defLang ) return k;
     if (!dic) {
-        console.error("Missing internationalization for language : \"" + exports.lang() + "\"!");
-        return k;
+        dic = words[defLang];
+        if( !dic ) {
+            return k;
+        }
     }
     txt = dic[k];
-    if (!txt) {
-        console.error("Missing internationalization ["
-                      + exports.lang()
-                      + "]: \"" + k + "\"!");
-        return k;
+    if( !txt ) {
+        dic = words[defLang];
+        txt = dic[k];
     }
+    if (!txt) return k;
     if (params.length > 1) {
         newTxt = "";
         lastIdx = 0;
